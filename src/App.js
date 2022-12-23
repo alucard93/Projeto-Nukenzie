@@ -4,9 +4,10 @@ import { useState } from 'react';
 import Login from './components/Login';
 import Header from './components/Header';
 import Form from './components/Form';
+import TotalMoney from './components/Totalmoney';
 
 function App() {
-  const [isLogin, setLogin] = useState(false);
+  const [isLogin, setLogin] = useState(true);
   const [ listTransactions, setListTransactions] = useState([])
   return (
     <>
@@ -17,6 +18,9 @@ function App() {
             <Form
               listTransactions={listTransactions}
               setListTransactions={setListTransactions}
+            />
+            <TotalMoney
+            listTransactions={listTransactions}
             />
           </>
         ) :
