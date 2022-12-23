@@ -1,4 +1,6 @@
-
+.background-login {
+    background: #212529;
+}
 .login {
     display: flex;
     width: 100%;
