@@ -13,6 +13,11 @@ function App() {
   const [listTransactions, setListTransactions] = useState([])
   const [transactionsSearch, setTransactionsSearch] = useState([]);
   const [buttonFilter, setButtonFilter] = useState("todos");
+  const [formData, setFormData] = useState({
+    description: "",
+    type: "entrada",
+    value:0,
+  });
 
   function removeTransaction(transactionTarget) {
 
@@ -25,6 +30,26 @@ function App() {
         const listRefreshedOnFilter = transactionsSearch.filter(transaction => transaction !== transactionTarget);
         setTransactionsSearch(listRefreshedOnFilter);
       }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+      const newTransaction = {
+        description: formData.description,
+        type: formData.type,
+        value: formData.value,
+      };
+      if(newTransaction.type === 'despesa') {
+        newTransaction.value *= -1
+      }
+
+      setListTransactions([...listTransactions, newTransaction]);
+
+      setFormData({
+        description: "",
+        type: "entrada",
+        value: 0,
+      });
   }
 
   function handleSearch(filter) {
@@ -50,8 +75,9 @@ function App() {
             <Header/>
             
             <Form
-              listTransactions={listTransactions}
-              setListTransactions={setListTransactions}
+              handleSubmit={handleSubmit}
+                setFormData={setFormData}
+                formData={formData}
             />
             
             <TotalMoney

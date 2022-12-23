@@ -1,3 +1,19 @@
 .container-no_card{
+    display: flex;
+    flex-direction: column;
     max-width: 359px;
+    gap: 20px;
 }
+
+.container-no_card h2 {
+    width: 336px;
+    height: 68px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    color: #343A40;
+}
+
+

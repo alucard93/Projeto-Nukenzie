@@ -13,7 +13,7 @@ const List = ({ transactionsList, removeTransaction, transactionsSearch, buttonF
     <>
         {
             listRender.length ? (
-                listRender.map((index, item) => 
+                listRender.map((item, index) => 
                     <Card
                         key={index}
                         transaction={item}
@@ -30,9 +30,9 @@ const List = ({ transactionsList, removeTransaction, transactionsSearch, buttonF
                             <h2>
                                 Você ainda não possui nenhum lançamento
                             </h2>
-                            <img src={NoCard} className="noCard fadeInLeft" alt="Imagem Card Vazio" />
-                            <img src={NoCard} className="noCard fadeInLeft" alt="Imagem Card Vazio" />
-                            <img src={NoCard} className="noCard fadeInLeft" alt="Imagem Card Vazio" />
+                            <img src={NoCard} alt="Imagem Card Vazio" />
+                            <img src={NoCard} alt="Imagem Card Vazio" />
+                            <img src={NoCard} alt="Imagem Card Vazio" />
                             </div>
                         </div>
                     </div>
