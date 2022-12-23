@@ -5,7 +5,6 @@ import logo from '../../assets/logo.svg';
 
 const Login = ({ setLogin }) => {
   return (
-    <body className="background-login">
         <div className='login'>
             <div className="container">
                 <div className="container-login">
@@ -23,7 +22,6 @@ const Login = ({ setLogin }) => {
                 </div>
             </div>
         </div>
-    </body>
   )
 }
 
