@@ -6,7 +6,7 @@
     --grey-2: #E9ECEF;
     --grey-3: #868E96;
     --grey-4: #212529;
-    --box-shadows: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --box-shadows: 0rem .625rem .9375rem -0.1875rem rgba(0, 0, 0, 0.1);
   }
   
   * {
@@ -20,27 +20,23 @@
     vertical-align: baseline;
     text-decoration: none;
   }
-
-
-  *{
-    font-family: sans-serif;
-}
+  
 ul, ol{
     margin: 0;
     padding: 0;
     list-style: none;
 }
-body{
+body, html{
     margin: 0;
     padding: 0;
-    background: rgb(238, 238, 238);
+    background: #212529;
 } 
-/* h1, h2, h3, h4, h5, h6, p, small{
+h1, h2, h3, h4, h5, h6, p, small{
     font-family: 'JetBrains Mono', monospace;
     font-weight: 800;
     margin: 0;
     padding: 0;
-} */
+}
 button{
     cursor: pointer;
 }
@@ -50,7 +46,7 @@ img{
 
 .container {
   width: 100%;
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin: 0 auto;
-  padding: .8rem;
+  padding: 12.8px;
 }
