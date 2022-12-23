@@ -1,0 +1,72 @@
+
+.login {
+    display: flex;
+    width: 100%;
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 4.4375rem;
+}
+
+.container-login--image {
+    width: 7.625rem;
+}
+
+.container-login--title{
+
+    max-width: 20.875rem;
+    height: 9rem;
+    margin-top: 1.0625rem;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.375rem;
+    line-height: 3rem;
+    color: #FFFFFF;
+}
+
+.container-login p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-top: .75rem;
+    color: #FFFFFF;
+}
+
+.container-login button {
+    width: 100%;
+    max-width: 22.5rem;
+    height: 3rem;
+    margin-top: 1.75rem;
+    background: #FD377E;
+    border: .125rem solid #FD377E;
+    border-radius: .5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #FFFFFF;
+}
+
+.container-vetor{
+    width: 100%;
+    max-width: 21.75rem;
+    margin-top: .9375rem;
+}
+
+@media (min-width: 728px){
+    .container-login{
+        flex-direction: row;
+    }
+    .container-vetor img {
+        max-width: 593px;
+    }
+}
