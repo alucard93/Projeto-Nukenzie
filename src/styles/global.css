@@ -29,7 +29,7 @@ ul, ol{
 body, html{
     margin: 0;
     padding: 0;
-    background: #212529;
+    background-color: #ffff;
 } 
 h1, h2, h3, h4, h5, h6, p, small{
     font-family: 'JetBrains Mono', monospace;
@@ -49,4 +49,5 @@ img{
   max-width: 81.25rem;
   margin: 0 auto;
   padding: 12.8px;
+  background-color: green;
 }
