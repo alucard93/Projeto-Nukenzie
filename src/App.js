@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Form from './components/Form';
 import TotalMoney from './components/Totalmoney';
 import Filters from './components/Filters';
+import List from './components/List';
 
 function App() {
   const [isLogin, setLogin] = useState(true);
@@ -13,7 +14,19 @@ function App() {
   const [transactionsSearch, setTransactionsSearch] = useState([]);
   const [buttonFilter, setButtonFilter] = useState("todos");
 
-  
+  function removeTransaction(transactionTarget) {
+
+    //tudo que foi diferente do que cliquei eu armazeno e deleto o que cliquei
+    const listRefreshed = listTransactions.filter(transaction => transaction !== transactionTarget);
+    setListTransactions(listRefreshed);
+
+      if (transactionsSearch.length > 0) {
+        //atualizo o filtro
+        const listRefreshedOnFilter = transactionsSearch.filter(transaction => transaction !== transactionTarget);
+        setTransactionsSearch(listRefreshedOnFilter);
+      }
+  }
+
   function handleSearch(filter) {
     //realiza a filtragem conforme parametro
     const newFilter = listTransactions.filter((transaction) => transaction.type === filter);
@@ -48,6 +61,13 @@ function App() {
             <Filters
               handleSearch={handleSearch}
               clearSearch={clearSearch}
+              buttonFilter={buttonFilter}
+            />
+            
+            <List
+              transactionsList={listTransactions}
+              removeTransaction={removeTransaction}
+              transactionsSearch={transactionsSearch}
               buttonFilter={buttonFilter}
             />
             
