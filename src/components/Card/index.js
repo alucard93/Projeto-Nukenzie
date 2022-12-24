@@ -6,16 +6,17 @@ const Card = ({ transaction, removeTransaction }) => {
   return (
     <div className="card-background">
         <div className="container">
-            <div 
-                className={
-                    transaction.type === "Entrada"
-                    ? "container-salary"
-                    : "container-salary-exit"
+            <div className={
+                    transaction.type === "entrada"
+                    ? 
+                    "container-salary"
+                    : 
+                    "container-salary-exit"
                 }
                 >
                 <h3 className="container-salary__tittle"> {transaction.description} </h3>
                 <p className="container-salary__entry">{transaction.type}</p>
-                <p className="container__salary">{Math.abs(transaction.value)}</p>
+                <p className="container__salary">R$ {Math.abs(transaction.value)},00</p>
                 <button className="btn-delete" onClick={() => removeTransaction(transaction)}>
                     <FaTrash/>
                 </button>

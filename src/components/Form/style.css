@@ -36,6 +36,7 @@ form {
     background: #F8F9FA;
     border: .125rem solid #F8F9FA;
     border-radius: .5rem;
+    padding-left: 16px;
 }
 
 .form__input--description::placeholder{
