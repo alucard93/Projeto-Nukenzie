@@ -34,8 +34,17 @@
 }
 
 .container-salary-exit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     max-width: 359px;
-    background-color: red;
+    height: 156px;
+    border-left: 4px solid #E9ECEF;
+    background: #F8F9FA;
+    border-radius: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px 0px 0px 4px;
 }
 
 .container-salary__tittle{
@@ -47,7 +56,27 @@
     color: #212529;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden; 
+    overflow: hidden;
+    text-transform: capitalize; 
+}
+
+.container-salary__entry{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #343A40;
+    text-transform: capitalize;
+}
+
+.container__salary{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
 }
 
 .btn-delete{
