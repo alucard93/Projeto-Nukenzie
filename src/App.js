@@ -9,7 +9,7 @@ import Filters from './components/Filters';
 import List from './components/List';
 
 function App() {
-  const [isLogin, setLogin] = useState(true);
+  const [isLogin, setLogin] = useState(false);
   const [listTransactions, setListTransactions] = useState([])
   const [transactionsSearch, setTransactionsSearch] = useState([]);
   const [buttonFilter, setButtonFilter] = useState("todos");
@@ -72,30 +72,38 @@ function App() {
       {
         isLogin ? (
           <>
-            <Header/>
-            
-            <Form
-              handleSubmit={handleSubmit}
-                setFormData={setFormData}
-                formData={formData}
+            <Header
+              setLogin={setLogin}
             />
-            
-            <TotalMoney
-              listTransactions={listTransactions}
-            />
-
-            <Filters
-              handleSearch={handleSearch}
-              clearSearch={clearSearch}
-              buttonFilter={buttonFilter}
-            />
-            
-            <List
-              transactionsList={listTransactions}
-              removeTransaction={removeTransaction}
-              transactionsSearch={transactionsSearch}
-              buttonFilter={buttonFilter}
-            />
+            <main className="container--main">
+              <section>
+                <Form
+                  handleSubmit={handleSubmit}
+                    setFormData={setFormData}
+                    formData={formData}
+                />
+                
+                <TotalMoney
+                  listTransactions={listTransactions}
+                />
+              </section>
+              
+              <aside>
+              <Filters
+                handleSearch={handleSearch}
+                clearSearch={clearSearch}
+                buttonFilter={buttonFilter}
+              />
+              
+              <List
+                transactionsList={listTransactions}
+                removeTransaction={removeTransaction}
+                transactionsSearch={transactionsSearch}
+                buttonFilter={buttonFilter}
+              />
+              </aside>
+              
+            </main>
             
           </>
         ) :

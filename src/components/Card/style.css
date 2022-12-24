@@ -2,6 +2,7 @@
 .container-no_card{
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 359px;
     gap: 20px;
 }
@@ -22,7 +23,8 @@
 .container-salary{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
     max-width: 359px;
     height: 156px;
     border-left: 4px solid #03B898;
@@ -36,6 +38,7 @@
 .container-salary-exit{
     display: flex;
     flex-direction: column;
+    width: 100%;
     justify-content: space-around;
     max-width: 359px;
     height: 156px;
@@ -45,6 +48,20 @@
     padding-left: 14px;
     padding-right: 14px;
     border-radius: 4px 0px 0px 4px;
+}
+
+.container-salary--title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 78px;
+}
+
+.container-salary--button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 78px;
 }
 
 .container-salary__tittle{
@@ -87,4 +104,23 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+@media (min-width: 728px){
+    .container-no_card{
+        max-width: 560px;
+    }
 
+    .container-salary, .container-salary-exit{
+        max-width: 560px;
+        display: flex;
+        flex-flow: row wrap;
+        height: 87px;
+    }
+
+    .container-salary--button{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 151px;
+        padding-top: 10px;
+    }
+}

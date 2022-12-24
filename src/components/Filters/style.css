@@ -19,6 +19,7 @@
     justify-content: space-between;
     max-width: 280px;
     margin-top: 10px;
+    gap: 16px;
 }
 .container-button button {
     display: flex;
@@ -56,4 +57,15 @@
     width: 92px;
     border: 1.4px solid #E9ECEF;
     color: #343A40;
+}
+
+@media (min-width: 728px){
+    .container-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 560px;
+        
+    }
 }
