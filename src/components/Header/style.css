@@ -35,5 +35,11 @@ header{
     font-size: 14px;
     line-height: 19px;
     color: #343A40;
-
 }
+
+@media(min-width: 728px){
+    .Header-flex{
+        max-width: 977px;
+        margin: 0 auto;
+    }
+} 

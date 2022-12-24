@@ -1,3 +1,126 @@
+/* card vazio */
 .container-no_card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     max-width: 359px;
+    gap: 20px;
+}
+
+.container-no_card h2 {
+    width: 336px;
+    height: 68px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    color: #343A40;
+}
+
+/* card full */
+
+.container-salary{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 359px;
+    height: 156px;
+    border-left: 4px solid #03B898;
+    background: #F8F9FA;
+    border-radius: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.container-salary-exit{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    max-width: 359px;
+    height: 156px;
+    border-left: 4px solid #E9ECEF;
+    background: #F8F9FA;
+    border-radius: 4px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.container-salary--title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 78px;
+}
+
+.container-salary--button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 78px;
+}
+
+.container-salary__tittle{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: capitalize; 
+}
+
+.container-salary__entry{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #343A40;
+    text-transform: capitalize;
+}
+
+.container__salary{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+.btn-delete{
+    width: 22px;
+    height: 22px;
+    background: #E9ECEF;
+    border-radius: 2.46154px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@media (min-width: 728px){
+    .container-no_card{
+        max-width: 560px;
+    }
+
+    .container-salary, .container-salary-exit{
+        max-width: 560px;
+        display: flex;
+        flex-flow: row wrap;
+        height: 87px;
+    }
+
+    .container-salary--button{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 151px;
+        padding-top: 10px;
+    }
 }

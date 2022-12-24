@@ -22,8 +22,8 @@ const Filters = ({ handleSearch, clearSearch, buttonFilter }) => {
                     </button>
                         
                     <button
-                        onClick={() => handleSearch('entrada')}
-                        disabled={buttonFilter === "entrada" ? true : false}
+                        onClick={() => handleSearch('despesa')}
+                        disabled={buttonFilter === "despesa" ? true : false}
                     >
                         Despesas
                     </button>

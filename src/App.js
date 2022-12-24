@@ -9,10 +9,15 @@ import Filters from './components/Filters';
 import List from './components/List';
 
 function App() {
-  const [isLogin, setLogin] = useState(true);
+  const [isLogin, setLogin] = useState(false);
   const [listTransactions, setListTransactions] = useState([])
   const [transactionsSearch, setTransactionsSearch] = useState([]);
   const [buttonFilter, setButtonFilter] = useState("todos");
+  const [formData, setFormData] = useState({
+    description: "",
+    type: "entrada",
+    value:0,
+  });
 
   function removeTransaction(transactionTarget) {
 
@@ -25,6 +30,26 @@ function App() {
         const listRefreshedOnFilter = transactionsSearch.filter(transaction => transaction !== transactionTarget);
         setTransactionsSearch(listRefreshedOnFilter);
       }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+      const newTransaction = {
+        description: formData.description,
+        type: formData.type,
+        value: formData.value,
+      };
+      if(newTransaction.type === 'despesa') {
+        newTransaction.value *= -1
+      }
+
+      setListTransactions([...listTransactions, newTransaction]);
+
+      setFormData({
+        description: "",
+        type: "entrada",
+        value: 0,
+      });
   }
 
   function handleSearch(filter) {
@@ -47,29 +72,38 @@ function App() {
       {
         isLogin ? (
           <>
-            <Header/>
-            
-            <Form
-              listTransactions={listTransactions}
-              setListTransactions={setListTransactions}
+            <Header
+              setLogin={setLogin}
             />
-            
-            <TotalMoney
-              listTransactions={listTransactions}
-            />
-
-            <Filters
-              handleSearch={handleSearch}
-              clearSearch={clearSearch}
-              buttonFilter={buttonFilter}
-            />
-            
-            <List
-              transactionsList={listTransactions}
-              removeTransaction={removeTransaction}
-              transactionsSearch={transactionsSearch}
-              buttonFilter={buttonFilter}
-            />
+            <main className="container--main">
+              <section>
+                <Form
+                  handleSubmit={handleSubmit}
+                    setFormData={setFormData}
+                    formData={formData}
+                />
+                
+                <TotalMoney
+                  listTransactions={listTransactions}
+                />
+              </section>
+              
+              <aside>
+              <Filters
+                handleSearch={handleSearch}
+                clearSearch={clearSearch}
+                buttonFilter={buttonFilter}
+              />
+              
+              <List
+                transactionsList={listTransactions}
+                removeTransaction={removeTransaction}
+                transactionsSearch={transactionsSearch}
+                buttonFilter={buttonFilter}
+              />
+              </aside>
+              
+            </main>
             
           </>
         ) :
