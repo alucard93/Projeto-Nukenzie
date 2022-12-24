@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 280px;
+    margin-top: 10px;
 }
 .container-button button {
     display: flex;
@@ -47,10 +48,12 @@
     background: #E9ECEF;
     width: 87px;
     border: 1.4px solid #E9ECEF;
+    color: #343A40;
 }
 
 .container-button button:nth-child(3){
     background: #E9ECEF;
     width: 92px;
     border: 1.4px solid #E9ECEF;
+    color: #343A40;
 }
